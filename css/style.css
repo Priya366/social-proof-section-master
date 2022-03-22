@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-dark-magenta: hsl(300, 43%, 22%);
+    --clr-dark-grayish-magenta: hsl(303, 10%, 53%);
+    --clr-light-grayish-magenta: hsl(300, 24%, 96%);
+    --clr-text-white: hsl(0, 0%, 100%);
+    --clr-soft-pink: hsl(333, 80%, 67%);
+    --fs-body: 0.9375rem;
+    --fw-light: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --ff-primary: 'Spartan', sans-serif;
+    --border-radius: 0.45rem;
+}
+
+
+/* TYPOGRAPHY  */
+
+h1,
+h2,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.intro h1 {
+    color: var(--clr-dark-magenta);
+    line-height: 1;
+    margin: 1.5em 0 0.8em;
+    font-weight: var(--fw-bold);
+}
+
+.intro p {
+    color: var(--clr-dark-grayish-magenta);
+    font-weight: var(--fw-medium);
+}
+
+.ratings p {
+    color: var(--clr-dark-magenta);
+    font-weight: 700;
+}
+
+.reviews h2 {
+    color: var(--clr-text-white);
+    font-weight: var(--fw-medium);
+    font-size: 0.98rem;
+}
+
+.reviews-child-verification {
+    color: var(--clr-soft-pink);
+    opacity: 0.70;
+    font-weight: var(--fw-medium);
+}
+
+.mentions a {
+    color: blueviolet;
+    font-weight: var(--fw-medium);
+}
+
+
+/* GENERAL STYLING  */
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-light);
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(/images/bg-pattern-top-mobile.svg), url(/images/bg-pattern-bottom-mobile.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
+
+.mentions {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    gap: 1em;
+}
+
+
+/* CONTAINER STYLING  */
+
+.grid-container {
+    width: 1100px;
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    gap: 2.8em;
+}
+
+
+/* Intro Section  */
+
+.intro {
+    text-align: center;
+}
+
+
+/* Ratings Section  */
+
+.ratings {
+    flex-direction: column;
+}
+
+.ratings-child {
+    background-color: var(--clr-light-grayish-magenta);
+    text-align: center;
+    padding: 0.8em 2em;
+    border-radius: var(--border-radius);
+}
+
+
+/* Reviews Section  */
+
+.reviews {
+    flex-direction: column;
+}
+
+.reviews-child {
+    padding: 2em;
+    background-color: var(--clr-dark-magenta);
+    border-radius: var(--border-radius);
+    color: hsl(0, 0%, 100%, 0.80);
+    transition: 0.3s all ease-in;
+}
+
+.reviews-child-profile {
+    align-items: center;
+    margin-bottom: 1.3em;
+}
+
+.reviews-child img {
+    border-radius: 50%;
+    height: 42px;
+    margin-right: 0.4em;
+}
+
+.reviews-child:hover {
+    transform: scale(1.03);
+}
+
+
+/* MEDIA QUERIES FOR TABLETS  */
+
+@media (min-width: 1000px) {
+    /* TYPOGRAPHY  */
+    .intro h1 {
+        font-size: 2.3rem;
+        margin: 0;
+        margin-bottom: 0.5em;
+    }
+    /* grid container styling  */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2em;
+    }
+    .intro {
+        text-align: left;
+        padding-top: 1em;
+    }
+    .ratings {
+        justify-content: center;
+    }
+    .ratings-child {
+        width: 445px;
+        display: flex;
+        gap: 0.8em;
+    }
+    .ratings-child:nth-child(2) {
+        margin-left: 1.8em;
+    }
+    .ratings-child:nth-child(3) {
+        margin-left: 3.6em;
+    }
+    .reviews {
+        grid-column: span 2;
+        flex-direction: row;
+    }
+    .reviews-child:nth-child(2) {
+        margin-top: 1.5em;
+    }
+    .reviews-child:nth-child(3) {
+        margin-top: 3em;
+    }
+}
