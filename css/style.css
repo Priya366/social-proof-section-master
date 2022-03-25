@@ -197,10 +197,14 @@ body {
         grid-column: span 2;
         flex-direction: row;
     }
+    .reviews-child:nth-child(1) {
+        align-self: flex-start;
+    }
     .reviews-child:nth-child(2) {
-        margin-top: 1.5em;
+        align-self: center;
     }
     .reviews-child:nth-child(3) {
         margin-top: 3em;
+        align-self: flex-end;
     }
 }
