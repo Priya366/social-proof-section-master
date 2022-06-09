@@ -8,7 +8,6 @@ This is a solution to the [Social proof section challenge on Frontend Mentor](ht
 
 ## Table of contents
 
-- [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
@@ -17,7 +16,7 @@ This is a solution to the [Social proof section challenge on Frontend Mentor](ht
 - [Author](#author)
 
 
-## Overview
+
 
 ### The challenge
 
